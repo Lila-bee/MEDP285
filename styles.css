@@ -1,5 +1,20 @@
-body {background-color: grey;
+body {
+background-image:url("1233723.jpg");
+background-color: #a6e752;
 font-family: Barlow, Arial, sans-serif;
 font-size: 22px;
 font-weight: 900;
+}
+nav {background-color: #a6e752;
+font-family: Barlow, Arial, sans-serif;
+font-size: 22px;
+font-weight: 900;
+}
+
+
+html {
+box-sizing: border-box;
+}
+* {
+box-sizing: inherit;
 }
