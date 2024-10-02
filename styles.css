@@ -1,14 +1,9 @@
 body {
-background-image:url("1233723.jpg");
-background-color: #a6e752;
-font-family: Barlow, Arial, sans-serif;
+background-image:url("Images/restaurant.png");
+background-color: ;
+font-family: "Fascinate Inline", system-ui;
 font-size: 22px;
-font-weight: 900;
-}
-nav {background-color: #a6e752;
-font-family: Barlow, Arial, sans-serif;
-font-size: 22px;
-font-weight: 900;
+font-weight: 500;
 }
 
 
@@ -18,3 +13,27 @@ box-sizing: border-box;
 * {
 box-sizing: inherit;
 }
+ 
+p {
+background: #a6e853;
+width: 500px;
+height: 150px;
+padding: 20px;
+border: 5px solid grey;
+margin: 20px;
+overflow: auto;
+}
+.grid-container {
+    display: grid;
+    place-items: center; 
+    height: 90vh; 
+
+.bordered-image {
+    border: 2px solid black;
+
+    .bordered-list 
+    {border: 2px solid black; 
+    padding: 20px;          
+    border-radius: 8px;     
+    max-width: 300px;       
+    margin: 20px auto; }
