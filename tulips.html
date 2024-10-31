@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Follow your flower Tulips</title>
+	<link rel="stylesheet" type="text/css" href="styless.css">
+</head>
+<body>
+<div class="container">
+	<header><h1>Tulips</h1></header>
+	<main>
+		<h2>What color Tulips are most common?</h2>
+			<p>~Red,Yellow,Pink,White,Purple,Orange~ </p>
+		
+ <div class="container">
+        <label for="inputText">Write a poem using the colors?:</label>
+        <input type="text" id="inputText" placeholder="Type here..." oninput="displayText()">
+        <p id="displayArea">Your input will appear here.</p>
+    </div>
+
+    <script>
+        function displayText() {
+            const input = document.getElementById('inputText').value;
+            document.getElementById('displayArea').textContent = input;
+        }
+    </script>
+	</main>
+	<nav>
+		
+	
+</nav>
+
+
+	<aside><h2>More Flowers</h2></aside>
+	<a href="tulips.html" class="image-button">
+<img src="images/tulips.jpg" style="width: 150px; height: 100px" alt="Tulips" alt="Button Image" style="width: 150px; height: auto;">
+</a>
+
+<a href="lillies.html" class="image-button">
+<img src="images/lillies.jpg" style="width: 150px; height: 100px" alt="Lillies" style="width: 150px; height: 100px" alt="Lillies" alt="Button Image" style="width: 150px; height: auto;">
+</a>
+
+	<footer><h2>Lynara Richards</h2></footer>
+
+</body>
+</html>
