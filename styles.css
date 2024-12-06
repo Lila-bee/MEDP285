@@ -1,52 +1,69 @@
-
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #ghostwhite;
+	font-family: "Fascinate Inline", system-ui;
+  font-weight: 400;
+  font-style: normal; 
+  background-color: #F9F4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+ 
+background-image: url("dots.zip");
+background-attachment: fixed;
 
-
-.container { 
-  display: grid;
-
-grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-h1,h2,h3,h4,h5,p {
-text-transform: uppercase;
-color: #f7c4ef
-
-}
-
-header {
-  background: ;
-  grid-column: 1 / 13;
-  display: grid;
-}
-main {
-  background: #;
-  grid-column: 1 / 5;
-}
-nav {
-  background: #;
-  grid-column: 5/ 13;
-  color: #f7c4ef;
-}
-aside{
-  background:;
-  grid-column: 1 / 13;
+#wrapper {
+	background-color: #ccf;
+	width: 60%;
+	padding: 40px;
+	margin: 100px auto 100px auto;
 }
 
-footer{
-background:; 
-grid-column: 1 / 13;
+    
 
+.cute-nav {
+    display: flex;
+    gap: 15px;
 }
-nav a {
-  text-decoration: none; 
+
+.nav-button {
+    background-color: #FFD9E8; /* Light pink */
+    color: #5B34DA; /* Purple */
+    border: 2px solid #FFC1D6; /* Slightly darker pink */
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-button:hover {
+    background-color: #FFB3E0; /* Brighter pink */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #FFD9E8, #F8D9FF, #FFD9E8);
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.nav-button:hover::before {
+    left: 0;
+}
+
+.nav-button span {
+    position: relative;
+    z-index: 2;
 }
