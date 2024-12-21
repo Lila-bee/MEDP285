@@ -1,42 +1,43 @@
-function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    terrariumElement.onpointerdown = pointerDrag;
+// Define canvasText as a global variable.
+let canvasText = 'Drag an image file onto the canvas.';
 
-    function pointerDrag(e) {
-        e.preventDefault();
-        console.log(e);
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onpointermove = elementDrag;
-        document.onpointerup = stopElementDrag;
-    }
+function setup() {
+  // Assign the dropArea variable to the canvas.
+  let dropArea = createCanvas(710, 400);
 
-    function elementDrag(e) {
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
-        terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
-    }
-
-    function stopElementDrag() {
-        document.onpointerup = null;
-        document.onpointermove = null;
-    }
+  // Add the drop() method to the canvas. Call the gotFile
+  // function when a file is dropped into the canvas.
+  dropArea.drop(gotFile);
+  noLoop();
 }
 
-dragElement(document.getElementById('plant1'));
-dragElement(document.getElementById('plant2'));
-dragElement(document.getElementById('plant3'));
-dragElement(document.getElementById('plant4'));
-dragElement(document.getElementById('plant5'));
-dragElement(document.getElementById('plant6'));
-dragElement(document.getElementById('plant7'));
-dragElement(document.getElementById('plant8'));
-dragElement(document.getElementById('plant9'));
-dragElement(document.getElementById('plant10'));
-dragElement(document.getElementById('plant11'));
-dragElement(document.getElementById('plant12'));
-dragElement(document.getElementById('plant13'));
-dragElement(document.getElementById('plant14'));
+function draw() {
+  background(100);
+
+  // Add instructions for dropping an image file in the canvas.
+  fill(255);
+  noStroke();
+  textSize(24);
+  textAlign(CENTER);
+  text(canvasText, width / 2, height / 2);
+
+  describe(`Grey canvas with the text "${canvasText}" in the center.`);
+}
+
+function gotFile(file) {
+  // If the file dropped into the canvas is an image,
+  // create a variable called img to contain the image.
+  // Remove this image file from the DOM and only
+  // draw the image within the canvas.
+  if (file.type === 'image') {
+    // Pass in an empty string for the alt text. This should only be done with
+    // decorative photos.
+    let img = createImg(file.data, '').hide();
+    image(img, 0, 0, width, height);
+  } else {
+    // If the file dropped into the canvas is not an image,
+    // change the instructions to 'Not an image file!'
+    canvasText = 'Not an image file!';
+    redraw();
+  }
+}

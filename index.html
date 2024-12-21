@@ -1,76 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Welcome to my Turtle Tank</title>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- import the webpage's stylesheet -->
-		<link rel="stylesheet" href="styles.css" />
-		<!-- import the webpage's JavaScript file -->
-		<script src="script.js" defer></script>
-	</head>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flowers, Flowers, Flowers</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<script src="flower.js"></script>
 
-	<body>
-		<div id="page">
-			<h1>Welcome to my virtual tank</h1>
-			<div id="left-container" class="container">
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant1" src="./images/turtle1.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant2" src="./images/turtle3.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant3" src="./images/fish1.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant4" src="./images/coral2.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant5" src="./images/rocks.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant6" src="./images/boat.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant7" src="./images/coral1.png" />
-				</div>
-			</div>
-			<div id="right-container" class="container">
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant8" src="./images/turtle2.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant9" src="./images/fish2.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant10" src="./images/plants1.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant11" src="./images/pearl.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant12" src="./images/shells.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant13" src="./images/conch.png" />
-				</div>
-				<div class="plant-holder">
-					<img class="plant" alt="plant" id="plant14" src="./images/treasurechest.png" />
-				</div>
-			</div>
+	<header>
 
-			<div id="terrarium">
-				<div class="jar-top"></div>
-				<div class="jar-walls">
-					<div class="jar-glossy-long"></div>
-					<div class="jar-glossy-short"></div>
-				</div>
-				<div class="dirt"></div>
-				<div class="jar-bottom"></div>
-			</div>
-		</div>
-	</body>
+	<nav>
+  <a href="index.html">Home</a>
+  <a href="flowers1.html">Drag and Drop</a>
+  <a href="flowers2.html">Make Your Garden</a>
+
+</nav>
+	</header>
+  
+
+<section class="main-content">
+	<p>Spring is far, but flowers don't have to be a cold distant thought. Before you explore this site think of all the beautiful flowers you've seen prior and wish to see now.</p>
+    <h1>What flower names do you know?</h1>
+    <p>Type a flower name and click "Add Flower".</p>
+
+  
+  <div id="flowerContainer">
+        <input type="text" id="flowerInput" placeholder="Enter a flower name">
+        <ul id="flowerList"></ul>
+    </div>
+  </section>
+
+
+ 
+ 
+	
+	
+
+
+</body>
 </html>
-
